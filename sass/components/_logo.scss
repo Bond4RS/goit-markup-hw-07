@@ -2,12 +2,32 @@
   display: flex;
   margin-right: 90px;
   color: var(--title-text-color);
-  font-family: raleway, sans-serif;
+  font-family: var(--secondary-font);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
 }
-.nav__logo-accent {
+
+.nav__logo--accent {
+  color: var(--accent-color);
+}
+
+.logo--footer {
+  margin-bottom: 20px;
+  display: inline-block;
+  color: var(--primary-white-color);
+  text-decoration: none;
+}
+
+.logo--footer,
+.logo--accent {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+}
+
+.logo--accent {
   color: var(--accent-color);
 }
