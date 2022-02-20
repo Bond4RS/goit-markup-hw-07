@@ -114,14 +114,10 @@
   padding-left: 40px;
   font-size: 14px;
   color: var(--title-text-color);
-}
 
-.modal-input:focus {
-  border-color: var(--accent-color);
-}
-
-.modal-input:focus + .modal-icon {
-  fill: var(--accent-color);
+  &:focus {
+    border-color: var(--accent-color);
+  }
 }
 
 .modal-icon {
@@ -129,6 +125,9 @@
   left: 15px;
   top: 50%;
   transform: translateY(-50%);
+  .modal-input:focus + & {
+    fill: var(--accent-color);
+  }
 }
 
 .modal-text {
@@ -168,20 +167,24 @@
   border: 2px solid #000000;
   border-radius: 2px;
   margin-right: 5px;
-}
+  .modal-check:focus + & {
+    border: 2px solid var(--accent-color);
+  }
+  .modal-check:checked + .modal-check-text > & {
+    border: none;
 
-.modal-check:focus + .modal-check-box {
-  border: 2px solid var(--accent-color);
-}
-
-.modal-check-icon {
-  fill: var(--primary-white-color);
+    background-color: var(--accent-color);
+  }
 }
 
 .modal-check:checked + .modal-check-text > .modal-check-box {
   border: none;
 
   background-color: var(--accent-color);
+}
+
+.modal-check-icon {
+  fill: var(--primary-white-color);
 }
 
 .link-contract {
@@ -205,6 +208,10 @@
   border-color: transparent;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    background-color: #188ce8;
+  }
 }
 
 .text-btn {
@@ -216,10 +223,4 @@
   letter-spacing: 0.06em;
 
   color: #ffffff;
-}
-
-.btn-send:focus,
-.btn-send:hover {
-  background-color: #188ce8;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

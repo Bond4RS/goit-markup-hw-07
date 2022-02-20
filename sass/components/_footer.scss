@@ -20,24 +20,6 @@
   flex-grow: 1;
 }
 
-.logo--footer {
-  margin-bottom: 20px;
-  display: inline-block;
-  color: var(--primary-white-color);
-  text-decoration: none;
-}
-
-.logo--footer,
-.logo--footer {
-  font-family: Raleway;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: calc(31 / 26);
-}
-.logo--accent {
-  color: var(--accent-color);
-}
-
 .contacts__map {
   margin-bottom: 9px;
 
@@ -96,17 +78,9 @@
 
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-}
-
-.nets-list__item + .nets-list__item {
-  margin-left: 10px;
-}
-
-.link-netsfooter:focus,
-.link-netsfooter:hover {
-  background-color: var(--accent-color);
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  & + & {
+    margin-left: 10px;
+  }
 }
 
 .nets-list__link {
@@ -118,6 +92,10 @@
   border-radius: 50%;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    background-color: var(--accent-color);
+  }
 }
 
 .nets-list__icon {
@@ -171,13 +149,10 @@
   color: var(--primary-white-color);
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.button-subs:focus,
-.button-subs:hover {
-  background-color: #188ce8;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    background-color: #188ce8;
+  }
 }
 
 .button-subs__name {
