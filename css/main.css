@@ -942,7 +942,7 @@ img {
   border: 2px solid var(--accent-color);
 }
 
-.modal-check:checked + .modal-check-text > .modal-check-box {
+.modal-check:checked .modal-check-box {
   border: none;
   background-color: var(--accent-color);
 }

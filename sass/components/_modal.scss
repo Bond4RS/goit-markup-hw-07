@@ -170,7 +170,7 @@
   .modal-check:focus + & {
     border: 2px solid var(--accent-color);
   }
-  .modal-check:checked + .modal-check-text > & {
+  .modal-check:checked   & {
     border: none;
 
     background-color: var(--accent-color);
